@@ -1,15 +1,20 @@
-The course takes place on **29 August 2025** at **East Campus USI-SUPSI, Lugano-Viganello** (Room **B1.13**).
+# Course Schedule  
 
-It runs from **09:00 to ~17:00** with the following indicative schedule:
+**Date:** 29 August 2025  
+**Location:** East Campus USI-SUPSI, Lugano-Viganello (Room B1.13)  
+**Time:** 09:00 – ~17:00  
 
-| Start  | End    | Topic                                                                 |
-|--------|--------|-----------------------------------------------------------------------|
-| 09:00  | 09:30  | Welcome and course introduction                                       |
-| 09:30  | 10:30  | Theory block 1: Introduction to FL              |
-| 10:30  | 11:00  | Coffee break                                                          |
-| 11:00  | 12:30  | Practical block 1: Group exercise simulating a FL consortium  |
-| 12:30  | 13:30  | Lunch break                                                                |
-| 13:30  | 14:30  | Theory block 2: FL for Bioinformatics                                 |
-| 14:30  | 15:00  | Coffee break                                                          |
-| 15:00  | 16:30  | Practical block 2: Group exercise developing a basic FL algorithm                                                          |
-| 16:30  | 17:00  | Wrap-up       
+---
+
+| **Start** | **End** | **Session**                                                                 |
+|-----------|---------|------------------------------------------------------------------------------|
+| 09:00     | 09:15   | Welcome and course introduction                                             |
+| 09:15     | 10:15   | **Theory Block 1:** FL foundations                                          |
+| 10:15     | 10:45   | ☕ Coffee break                                                             |
+| 10:45     | 11:30   | **Guest Lecture:** *Flower, a Friendly Federated AI Framework* <br> (Y. Gao & W. Lindskog, Flower) |
+| 11:30     | 12:30   | **Practical Block 1:** My first FL project                                  |
+| 12:30     | 13:30   | 🍴 Lunch break                                                             |
+| 13:30     | 14:15   | **Theory Block 2:** FL for Bioinformatics                                   |
+| 14:15     | 14:30   | ☕ Coffee break                                                             |
+| 14:30     | 16:30   | **Practical Block 2:** FL for single-cell data                              |
+| 16:30     | 17:00   | Wrap-up & discussion                                                        |
