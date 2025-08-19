@@ -9,6 +9,8 @@ This course will be held on **29 August 2025** at **East Campus USI-SUPSI, Lugan
 * Laura Azzimonti
 * Sandra Mitrović
 * Lea Multerer
+* Francesco Gualdi
+* Francesca Mangili
 
 ## Overview
 In recent years, there has been increasing concern about the risks associated with data usage, particularly regarding data sharing.
