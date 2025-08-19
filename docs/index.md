@@ -14,7 +14,7 @@ This course will be held on **29 August 2025** at **East Campus USI-SUPSI, Lugan
 
 ## Overview
 In recent years, there has been increasing concern about the risks associated with data usage, particularly regarding data sharing.
-This has led to the introduction of regulations which impose stricter rules on data management.
+This has led to the introduction of regulations that impose stricter rules on data management.
 These regulations significantly impact scientific research, especially in the biomedical field, where the sensitivity of the
 data makes multi-center studies more challenging to conduct.
 
@@ -32,7 +32,7 @@ will be simulated using the open-source FL platform framework Flower (https://fl
 
 At the end of the course, the participants are expected to:
 
-* Develop an understanding of FL concepts, including its operational framework, privacy benefits, and challenges.
+* Understand the key concepts of FL, including its operational framework, privacy benefits, and challenges.
 * Gain an overview of federated methods in bioinformatics, including federated equivalents of established bioinformatics algorithms as well as federated machine learning algorithms applied to bioinformatics data.
 * Acquire hands-on experience using a federated learning framework (Flower).
 * Understand the process of developing a federated learning algorithm through hands-on experience in a didactic exercise.
