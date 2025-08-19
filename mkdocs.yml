@@ -3,7 +3,7 @@ nav:
     - Home: index.md
     - Precourse preparations: precourse.md
     - Course schedule: course_schedule.md
-    - Exercises: exercises.md
+    - Course material: course_material.md
 
 theme:
   name: material
