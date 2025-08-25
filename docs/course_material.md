@@ -1,2 +1,0 @@
-All course material and exercises will be available on the day of the course in the GitHub repository:
-[https://github.com/sib-swiss/federated-learning-training](https://github.com/sib-swiss/federated-learning-training)
