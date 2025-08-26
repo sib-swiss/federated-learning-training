@@ -107,12 +107,10 @@ def get_loss(model, adata):
 
 def load_local_data_deployment(data_file_path: str) -> anndata.AnnData:
     """
-    Load a partition of the gene expression AnnData corresponding to a single technology.
+    Loads an AnnData dataset.
 
     Parameters
     ----------
-    partition_id : int
-        Index of the technology to select (based on `adata.obs['tech'].unique()`).
     data_file_path : str
         Path to the `.h5ad` file.
 
