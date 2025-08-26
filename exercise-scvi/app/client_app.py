@@ -4,7 +4,7 @@ from flwr.client import ClientApp, NumPyClient
 from flwr.common import Context
 from flwr.client.mod import secaggplus_mod 
 
-from app.task import load_local_data
+from app.task import load_local_data_simulation
 from app.task import read_json, get_weights, set_weights, get_loss, get_architecture, create_scvi_model
 
 import gc
@@ -61,12 +61,12 @@ def client_fn(context: Context):
 
     # Retrieve the local adatas (train)
     adata_file_path = context.run_config["adata_train_file_path"]
-    adata_local_train = load_local_data(client_id, adata_file_path)
+    adata_local_train = load_local_data_simulation(client_id, adata_file_path)
     adata_local_train = adata_local_train[:, hvg_list].copy()
 
     # Retrieve the local adatas (valid)
     adata_file_path = context.run_config["adata_valid_file_path"]
-    adata_local_valid = load_local_data(client_id, adata_file_path)
+    adata_local_valid = load_local_data_simulation(client_id, adata_file_path)
     adata_local_valid = adata_local_valid[:, hvg_list].copy()
 
     # Load model architecture parameters
