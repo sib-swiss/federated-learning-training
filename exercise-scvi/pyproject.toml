@@ -25,10 +25,8 @@ num_rounds = 5
 num_local_epochs = 3
 
 # Paths for input and output files
-genes_file_path = "data_input/all_genes_in_adata.txt"
 adata_train_file_path = "data_input/pancreas_train.h5ad"
 adata_valid_file_path = "data_input/pancreas_valid.h5ad"
-results_file_path = "data_output/top2000_genes_federated.csv"
 hvg_list_path = "data_input/hvg_list.json"
 batch_list_path = "data_input/batch_list.json"
 model_file_path = "model_federated/model.pt"
