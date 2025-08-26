@@ -15,4 +15,4 @@ exercise-scvi-solution/data_input/pancreas_test.h5ad
 exercise-scvi/model_centralized/
 exercise-scvi/model_federated/
 exercise-scvi-solution/model_centralized/
-exercise-scvi-solution/model_fedearated/
+exercise-scvi-solution/model_federated/
