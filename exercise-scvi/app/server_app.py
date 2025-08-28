@@ -3,7 +3,7 @@
 from flwr.common import Context, ndarrays_to_parameters
 from flwr.server import ServerApp, ServerAppComponents, ServerConfig
 
-from flwr.server.strategy import FedAvg
+from app.custom_strategy import SaveOnFinalFedAvg, make_on_final_parameters
 from app.task import read_json, get_weights, set_weights, create_dummy_adata_from_hvg, get_architecture, create_scvi_model 
 
 
@@ -27,11 +27,20 @@ def server_fn(context: Context):
     scvi_model = create_scvi_model(adata_dummy, batch_list, arch_cfg)  # Validate model creation
     initial_parameters = ndarrays_to_parameters(get_weights(scvi_model))
 
+    # --- Create a callback to persist the final aggregated parameters ---
+    on_final = make_on_final_parameters(
+        model=scvi_model,
+        set_weights=set_weights,
+        save_path=model_file_path,
+    )
+
     # FedAvg as a starting srategy
-    strategy = FedAvg(
+    strategy = SaveOnFinalFedAvg(
+        num_rounds=num_rounds,
+        on_final_parameters=on_final,
         fraction_fit=1.0,
         accept_failures=False,
-        fraction_evaluate=1.0,
+        fraction_evaluate=0.0,
         initial_parameters=initial_parameters,
     )
 
