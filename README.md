@@ -1,8 +1,12 @@
-# Development branch
+# Federated Learning in Bioinformatics
 
-⚠️ **Important Notice**  
-This branch is **only used by the instructors to prepare the course**.  
-Please **do not use this branch**.  
+Welcome to the course repository for **Federated Learning in Bioinformatics**
 
-All course material will be published on the **`main` branch**.  
-Please wait until the course begins — everything you need will be available there.
+The full course website is available here:
+[Course Website](https://sib-swiss.github.io/federated-learning-training/)
+
+Course material will be made available in this repository on the day of the course.
+
+## Before the course
+Please complete the required software setup before attending. See the **Precourse preparations** section on the course site:  
+[Precourse preparations](https://sib-swiss.github.io/federated-learning-training/precourse/)
