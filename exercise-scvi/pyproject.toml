@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "FedSCVI"
+version = "1.0.0"
+description = "FedSCVI: A Flower for federated single cell variational inference."
+license = "Apache-2.0"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.flwr.app]
+publisher = "dmalpetti"
+
+[tool.flwr.app.components]
+serverapp = "app.server_app:app"
+clientapp = "app.client_app:app"
+
+[tool.flwr.app.config]
+
+# Main simulation parameters
+num_rounds = 5
+num_local_epochs = 3
+
+# Paths for input and output files
+adata_train_file_path = "data_input/pancreas_train.h5ad"
+adata_valid_file_path = "data_input/pancreas_valid.h5ad"
+hvg_list_path = "data_input/hvg_list.json"
+batch_list_path = "data_input/batch_list.json"
+model_file_path = "model_federated/model.pt"
+loss_plot_path = "loss_plot.png"
+
+# Model architecture parameters
+use_layer_norm = "both" 
+use_batch_norm = "none"
+encode_covariates = true
+dropout_rate = 0.2
+n_layers = 2
+
+# SecAgg+ parameters
+num_shares = 3                   
+reconstruction_threshold = 2     
+
+[tool.flwr.federations]
+default = "local-simulation"
+
+[tool.flwr.federations.local-simulation]
+options.num-supernodes = 7  # Number of clients in the simulation

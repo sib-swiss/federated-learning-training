@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "HighVariance"
+version = "1.0.0"
+description = "A Flower for high-variance genes identification"
+license = "Apache-2.0"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.flwr.app]
+publisher = "dmalpetti"
+
+[tool.flwr.app.components]
+serverapp = "app.server_app:app"
+clientapp = "app.client_app:app"
+
+[tool.flwr.app.config]
+# Main simulation parameters
+num-server-rounds = 1
+
+# Parameters for exercise starting point
+max_rand_int = 100
+max_rand_weight = 10
+
+# Paths for input and output files
+genes_file_path = "data_input/all_genes_list.json"
+adata_file_path = "data_input/pancreas_train.h5ad"
+results_file_path = "data_output/top2000_genes_federated.json"
+
+[tool.flwr.federations]
+default = "local-simulation"
+
+[tool.flwr.federations.local-simulation]
+options.num-supernodes = 7  # Number of clients in the simulation
