@@ -9,6 +9,7 @@ Course material will be made available in this repository on the day of the cour
 
 ## Before the course
 Please complete the required software setup before attending. See the **Precourse preparations** section on the course site:  
+
 [Precourse preparations](https://sib-swiss.github.io/federated-learning-training/precourse/)
 
 ## After the course
