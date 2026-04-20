@@ -236,21 +236,13 @@ Select your operating system from the tabs below:
 
     Once activated, your terminal prompt should show the environment name at the beginning of the command line.
 
-<script>
-window.addEventListener("DOMContentLoaded", function() {
-  var tabMap = {
-    "#for-macos": "__tabbed_1_1",
-    "#for-windows": "__tabbed_1_2",
-    "#for-linux": "__tabbed_1_3"
-  };
-  var hash = window.location.hash;
-  var target = tabMap[hash];
-  if (target) {
-    var input = document.getElementById(target);
-    if (input) {
-      input.checked = true;
-      input.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }
-});
-</script>
+## Results {.tabset}
+
+### Plots
+
+We show a scatter plot in this section.
+
+
+### Tables
+
+We show the data in this tab.
