@@ -4,7 +4,7 @@ To ensure everything runs smoothly during the course, please complete the steps 
 
 ## 1. Install Conda
 
-If you don’t already have Conda installed, we recommend installing **Miniconda**, a lightweight version of Anaconda.
+If you don’t already have **Conda** installed, we recommend installing **Miniconda**, a lightweight version of Anaconda.
 
 ### Steps
 
@@ -20,9 +20,9 @@ conda --version
 ```
 This should print the Conda version number.
 
-## 1. Install VS Code
+## 2. Install VS Code
 
-If you don’t already have VS Code installed, please install **Visual Studio Code (VS Code)** as your editor for the course.
+If you don’t already have **Visual Studio Code (VS Code)** installed, please install it as your editor for the course.
 
 ### Steps
 
@@ -47,6 +47,7 @@ You will need a local copy of this GitHub repository to access the course materi
 https://github.com/sib-swiss/federated-learning-training.git
 ```
 4. Choose the folder where you would like to store the course files.
+
 5. Once the download is complete, click Open to open the repository in VS Code.
 
 ## 4. Set Up the Environment
@@ -65,6 +66,7 @@ We provide a Conda environment file that installs all required packages for the 
 fl-course-env.yaml
 ```
 6. Wait while VS Code creates the environment and installs the required packages. This may take a while.
+
 7. Once completed, select the newly created environment as the active Python interpreter if prompted.
 
 You are then ready to use the course environment in VS Code.
