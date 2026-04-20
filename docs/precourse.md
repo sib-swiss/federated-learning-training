@@ -4,6 +4,10 @@ To ensure everything runs smoothly during the course, please complete the steps 
 
 Choose your operating system below:
 
+- [macOS](#for-macos)
+- [Windows](#for-windows)
+- [Linux](#for-linux)
+
 === "macOS"
 
     ## For macOS
@@ -235,3 +239,22 @@ Choose your operating system below:
     4. In VS Code, select the `fl-course-env` interpreter if prompted.
 
     Once activated, your terminal prompt should show the environment name at the beginning of the command line.
+
+<script>
+window.addEventListener("DOMContentLoaded", function() {
+  var tabMap = {
+    "#for-macos": "__tabbed_1_1",
+    "#for-windows": "__tabbed_1_2",
+    "#for-linux": "__tabbed_1_3"
+  };
+  var hash = window.location.hash;
+  var target = tabMap[hash];
+  if (target) {
+    var input = document.getElementById(target);
+    if (input) {
+      input.checked = true;
+      input.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+});
+</script>
