@@ -2,24 +2,16 @@
 
 To ensure everything runs smoothly during the course, please complete the steps below **before arriving**.
 
----
-
-[macOS](#macos) · [Windows](#windows) · [Linux](#linux)
-
----
-
-## macOS
-
+{% tabs %}
+{% tab title="macOS" %}
 TBD
+{% endtab %}
 
----
-
-## Windows
-
+{% tab title="Windows" %}
 TBD
+{% endtab %}
 
----
-
-## Linux
-
+{% tab title="Linux" %}
 TBD
+{% endtab %}
+{% endtabs %}
