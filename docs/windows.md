@@ -5,12 +5,12 @@
 
 1. Open the terminal with admin rights
 2. Run the following command:
-   ```bash
-   reg add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
-    ```
+
+```bash
+reg add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
+```
 3. Restart the pc
 
----
 
 ## 2. Install Conda
  
