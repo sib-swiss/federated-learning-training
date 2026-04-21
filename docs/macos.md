@@ -1,3 +1,5 @@
+# macOS
+
 ## 1. Install Conda
 
 If you do not already have **Conda** installed, we recommend installing **Miniconda**, a lightweight version of Anaconda.
