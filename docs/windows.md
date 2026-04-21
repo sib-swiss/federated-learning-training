@@ -1,4 +1,17 @@
-## 1. Install Conda
+
+## 1. Enable long Path in windows
+
+### Steps
+
+1. Open the terminal with admin rights
+2. Run the following command:
+   ```bash
+   reg add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
+    ```
+3. Restart the pc
+
+
+## 2. Install Conda
  
 If you do not already have **Conda** installed, we recommend installing **Miniconda**, a lightweight version of Anaconda.
  
@@ -10,9 +23,10 @@ If you do not already have **Conda** installed, we recommend installing **Minico
 4. Download **Miniconda** for your operating system.
 5. Run the installer and follow the instructions. During installation the checkbox **Add miniconda to PATH must be toggled**.
  
-To verify that Conda was installed correctly, open a terminal (command prompt) and run:
+To verify that Conda was installed correctly, open a terminal and run:
  
 ```bash
+conda init powershell
 conda --version
 ```
  
@@ -20,7 +34,7 @@ This should display the installed Conda version number.
  
 ---
  
-## 2. Install Git
+## 3. Install Git
 If you do not already have **Git** installed, please install it.
  
 ### Steps
@@ -31,7 +45,7 @@ If you do not already have **Git** installed, please install it.
 
 ---
  
-## 3. Install VS Code
+## 4. Install VS Code
  
 If you do not already have **Visual Studio Code (VS Code)** installed, please install it as your editor for the course.
  
@@ -46,7 +60,7 @@ To verify that VS Code was installed correctly, open the application successfull
  
 ---
  
-## 4. Clone the Course Repository
+## 5. Clone the Course Repository
  
 You will need a local copy of the course GitHub repository to access the course materials and the environment file.
  
@@ -65,7 +79,7 @@ https://github.com/sib-swiss/federated-learning-training.git
  
 ---
  
-## 4. Set Up the Environment
+## 6. Set Up the Environment
  
 We provide a Conda environment file that installs all required packages for the exercises.
  
@@ -73,8 +87,7 @@ We provide a Conda environment file that installs all required packages for the 
  
 1. If it is not already open, open **VS Code** and load the cloned `federated-learning-training` folder.
 2. Open a terminal in VS Code via **Terminal > New Terminal**
-3. Make sure the terminal is command prompt and not Powershell, you can select them from the dropdown menu top-right of the terminal.
-4. Run the following command:
+3. Run the following command
  
 ```bash
 conda env create -f fl-course-env.yaml
