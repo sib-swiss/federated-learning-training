@@ -10,6 +10,7 @@
     ```
 3. Restart the pc
 
+---
 
 ## 2. Install Conda
  
