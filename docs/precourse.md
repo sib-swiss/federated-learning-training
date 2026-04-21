@@ -1,23 +1,9 @@
 # Course Prerequisites
 
-To ensure everything runs smoothly during the course, please complete the steps below **before arriving**.
+To ensure everything runs smoothly during the course, please complete the steps below **before arriving**. This setup is essential so that all required software and packages are ready to use, allowing us to start the hands-on exercises immediately and make the best use of our time together.
 
-> Select your operating system: [macOS](#macos) · [Windows](#windows) · [Linux](#linux)
+Select your operating system to get started:
 
----
-
-## macOS
-
-TBD
-
----
-
-## Windows
-
-TBD
-
----
-
-## Linux
-
-TBD
+- [macOS](macos.md)
+- [Windows](windows.md)
+- [Linux](linux.md)
