@@ -20,7 +20,18 @@ This should display the installed Conda version number.
  
 ---
  
-## 2. Install VS Code
+## 2. Install Git
+If you do not already have **Git** installed, please install it.
+ 
+### Steps
+ 
+1. Go to the official [Git download page](https://git-scm.com/install/windows).
+2. Download the installer.
+3. Follow the installation instructions for your platform.
+
+---
+ 
+## 3. Install VS Code
  
 If you do not already have **Visual Studio Code (VS Code)** installed, please install it as your editor for the course.
  
@@ -33,16 +44,6 @@ If you do not already have **Visual Studio Code (VS Code)** installed, please in
  
 To verify that VS Code was installed correctly, open the application successfully.
  
----
- 
-## 3. Install Git
-If you do not already have **Git** installed, please install it as your editor for the course.
- 
-### Steps
- 
-1. Go to the official [Git download page](https://git-scm.com/install/windows).
-2. Download the installer.
-3. Follow the installation instructions for your platform.
 ---
  
 ## 4. Clone the Course Repository
