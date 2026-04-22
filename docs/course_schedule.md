@@ -9,9 +9,10 @@
 | **Start** | **End** | **Session**                                                                 |
 |-----------|---------|------------------------------------------------------------------------------|
 | 09:00     | 09:15   | Welcome and course introduction                                             |
-| 09:15     | 10:30   | **Theory Block 1:** FL foundations                                          |
-| 10:30     | 11:00   | ☕ Coffee break                                                             |
-| 11:00     | 12:30   | **Practical Block 1:** My first FL project                                  |
+| 09:15     | 10:15   | **Theory Block 1:** FL foundations                                          |
+| 10:15     | 10:45   | ☕ Coffee break                                                             |
+| 10:45     | 11:30   | **Guest Lecture:** *Flower, a Friendly Federated AI Framework* <br> (Y. Gao & W. Lindskog, Flower) |
+| 11:30     | 12:30   | **Practical Block 1:** My first FL project                                  |
 | 12:30     | 13:30   | 🍴 Lunch break                                                             |
 | 13:30     | 14:15   | **Theory Block 2:** FL for Bioinformatics                                   |
 | 14:15     | 14:30   | ☕ Coffee break                                                             |
