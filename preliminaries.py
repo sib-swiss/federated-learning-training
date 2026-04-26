@@ -139,7 +139,7 @@ with open(all_techs_path, "w") as f:
 
 print(f"Saved {len(techs)} technologies list to {all_techs_path}")
 
-# --- Cleanup: delete the original full dataset file ---
+# Cleanup: delete the original full dataset file 
 del pancreas_adata  # drop reference to ensure no open handle
 try:
     if os.path.exists(pancreas_adata_path):
