@@ -106,20 +106,20 @@ def main(grid: Grid, context: Context) -> None:
     #     loss_plot_path=loss_plot_path,
     # )
 
-    # Strategy 3: FedAvg + train/valid loss plot + early stopping
-    #   - tracks train and validation losses
-    #   - optionally stops early
-    strategy = FedAvgSaveModelPlotLossesEarlyStopping(
-        num_rounds=num_rounds,
-        on_final_arrays=on_final,
-        fraction_train=1.0,
-        fraction_evaluate=1.0,
-        weighted_by_key="num-examples",
-        loss_history_path=None,
-        loss_plot_path=loss_plot_path,
-        early_stopping_patience=early_stopping_patience,
-        early_stopping_min_delta=early_stopping_min_delta,
-    )
+    # # Strategy 3: FedAvg + train/valid loss plot + early stopping
+    # #   - tracks train and validation losses
+    # #   - optionally stops early
+    # strategy = FedAvgSaveModelPlotLossesEarlyStopping(
+    #     num_rounds=num_rounds,
+    #     on_final_arrays=on_final,
+    #     fraction_train=1.0,
+    #     fraction_evaluate=1.0,
+    #     weighted_by_key="num-examples",
+    #     loss_history_path=None,
+    #     loss_plot_path=loss_plot_path,
+    #     early_stopping_patience=early_stopping_patience,
+    #     early_stopping_min_delta=early_stopping_min_delta,
+    # )
 
 
     # ============================================================

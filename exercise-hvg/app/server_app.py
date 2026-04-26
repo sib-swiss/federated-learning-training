@@ -53,26 +53,26 @@ def main(grid: Grid, context: Context) -> None:
     # 3. Aggregation strategy
     # ============================================================
 
-    # strategy = FedAvg(
+    strategy = FedAvg(
+        fraction_train=1.0,
+        fraction_evaluate=0.0,
+        weighted_by_key="client-weight",
+    )
+
+    # # This is a custom strategy that extends FedAvg to compute an HVG mask.
+    # # It performs the following steps:
+    # #   - receives client sufficient statistics
+    # #   - uses FedAvg aggregation
+    # #   - reconstructs global statistics
+    # #   - computes the highly variable genes
+    # #   - returns a binary mask to clients
+    # strategy = FedAvgComputeMaskSaveHvg(
+    #     all_genes_file_path=all_genes_file_path,
+    #     hvg_file_path=top2k_genes_file_path,
     #     fraction_train=1.0,
     #     fraction_evaluate=1.0,
     #     weighted_by_key="client-weight",
     # )
-
-    # This is a custom strategy that extends FedAvg to compute an HVG mask.
-    # It performs the following steps:
-    #   - receives client sufficient statistics
-    #   - uses FedAvg aggregation
-    #   - reconstructs global statistics
-    #   - computes the highly variable genes
-    #   - returns a binary mask to clients
-    strategy = FedAvgComputeMaskSaveHvg(
-        all_genes_file_path=all_genes_file_path,
-        hvg_file_path=top2k_genes_file_path,
-        fraction_train=1.0,
-        fraction_evaluate=1.0,
-        weighted_by_key="client-weight",
-    )
 
     # ============================================================
     # 4. Start federated preprocessing
