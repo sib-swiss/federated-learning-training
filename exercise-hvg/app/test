@@ -1,0 +1,77 @@
+"""FedVariance: Flower server app for federated HVG preprocessing."""
+
+from pathlib import Path
+
+from flwr.app import ArrayRecord, Context
+from flwr.serverapp import Grid, ServerApp
+
+from app.custom_strategy import FedAvgComputeMask
+from app.task import get_dummy_start
+
+# Create Flower server application
+app = ServerApp()
+
+
+@app.main()
+def main(grid: Grid, context: Context) -> None:
+    """
+    Main entry point of the ServerApp.
+
+    The server coordinates the federated preprocessing workflow:
+      1. Read configuration values
+      2. Create dummy initial arrays
+      3. Instantiate the custom aggregation strategy
+      4. Start the federated run
+    """
+
+    # ============================================================
+    # 1. Read configuration parameters
+    # ============================================================
+
+    # Number of federated rounds (defined in pyproject.toml)
+    num_rounds = int(context.run_config["num-server-rounds"])
+
+    # Shared folder containing server-side inputs/outputs
+    server_folder = Path(context.run_config["server_folder_path"])
+
+    # File containing the ordered list of all genes
+    all_genes_file_path = server_folder / context.run_config["all_genes_file"]
+
+    # Output file containing the selected top genes
+    top2k_genes_file_path = server_folder / context.run_config["top2k_genes_file"]
+
+    # ============================================================
+    # 2. Create initial dummy arrays
+    # ============================================================
+
+    # Flower expects initial arrays even if no neural network is trained.
+    # Here we use placeholder arrays with the correct dimensions.
+    initial_arrays = ArrayRecord(
+        get_dummy_start(all_genes_file_path)
+    )
+
+    # ============================================================
+    # 3. Select aggregation strategy
+    # ============================================================
+
+    # This custom strategy:
+    #   - receives client sufficient statistics
+    #   - uses FedAvg aggregation
+    #   - reconstructs global statistics
+    #   - computes the highly variable genes
+    #   - returns a binary mask to clients
+    strategy = FedAvgComputeMask(
+        all_genes_file_path=all_genes_file_path,
+        fraction_train=1.0,
+        weighted_by_key="num-examples",
+    )
+
+    # ============================================================
+    # 4. Start federated preprocessing
+    # ============================================================
+
+    strategy.start(
+        grid=grid,
+        initial_arrays=initial_arrays,
+        num_rounds=num_rounds,
+    )
