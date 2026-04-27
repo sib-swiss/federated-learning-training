@@ -7,4 +7,3 @@ model_centralized/
 model_federated/
 exercise-hvg/app/__pycache__/
 exercise-scvi/app/__pycache__/
-materials/
