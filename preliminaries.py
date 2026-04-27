@@ -18,8 +18,7 @@ import sys
 required = {
     "jax": "jax[cpu]==0.4.35",
     "numpyro": "numpyro==0.15.3",
-    "gdown": "gdown==4.7.1",
-    "flwr": "flwr==1.19.0",
+    "gdown": "gdown==4.7.1"
 }
 
 missing = [
