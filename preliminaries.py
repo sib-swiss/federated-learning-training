@@ -13,6 +13,7 @@ from sklearn.model_selection import train_test_split
 import importlib.util
 import subprocess
 import sys
+import shutil
 
 # Small environment fixes
 required = {
@@ -47,32 +48,32 @@ files = [
     "global_loss.npy",
 ]
 
-# Delete folders if they exist
-for folder in folders:
-    path = Path(folder)
-    if path.exists() and path.is_dir():
-        shutil.rmtree(path)
-        print(f"Deleted folder: {path}")
+# # Delete folders if they exist
+# for folder in folders:
+#     path = Path(folder)
+#     if path.exists() and path.is_dir():
+#         shutil.rmtree(path)
+#         print(f"Deleted folder: {path}")
 
-# Delete files if they exist
-for file in files:
-    path = Path(file)
-    if path.exists() and path.is_file():
-        path.unlink()
-        print(f"Deleted file: {path}")
+# # Delete files if they exist
+# for file in files:
+#     path = Path(file)
+#     if path.exists() and path.is_file():
+#         path.unlink()
+#         print(f"Deleted file: {path}")
 
 
 data_dir = Path("data_centralized")
 data_dir.mkdir(exist_ok=True)
 
 pancreas_adata_path = data_dir / "pancreas_full.h5ad"
-file_id = "1r_P3O8DE6Qu-6U0sFyZh1P_H6-un9mHc"
+# file_id = "1r_P3O8DE6Qu-6U0sFyZh1P_H6-un9mHc"
 
-gdown.download(
-    f"https://drive.google.com/uc?id={file_id}",
-    str(pancreas_adata_path),
-    quiet=False,
-)
+# gdown.download(
+#     f"https://drive.google.com/uc?id={file_id}",
+#     str(pancreas_adata_path),
+#     quiet=False,
+# )
 
 pancreas_adata = sc.read_h5ad(pancreas_adata_path)
 
